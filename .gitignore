@@ -1,0 +1,19 @@
+# Files not to track
+
+# Crash dumps
+erl_crash.dump*
+*.dmp
+
+# Tmp/Intermediate files
+plt/*
+*.etrace
+
+# User's private environment
+.erlang
+.erlang.econf
+emakefile
+
+# IDE files
+.komodotools
+*.komodoproject
+ebin/

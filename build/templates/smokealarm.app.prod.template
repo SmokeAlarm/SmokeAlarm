@@ -1,0 +1,18 @@
+%%% SmokeAlarm .app file for PRODUCTION.
+
+{application,smokealarm,
+             [{vsn,"0.01a"},
+              {description,"SmokeAlarm"},
+              {modules,[sa3p_gen_smtp_binstr,sa3p_gen_smtp_client,
+                        sa3p_gen_smtp_mimemail,sa3p_gen_smtp_socket,
+                        sa3p_gen_smtp_util,sa_debug,sa_detector,
+                        sa_detector_feeds,sa_detector_reactors,
+                        sa_detectors_sup,sa_esp,sa_stddetectors_net,
+                        sa_stdfeed_appmoni,sa_stdfeed_errlog,
+                        sa_stdfeed_netifs,sa_stdfeed_nodes,sa_stdfeed_sasllog,
+                        sa_stdreactor_app,sa_stdreactor_crdmp,
+                        sa_stdreactor_errlog,sa_stdreactor_mail,
+                        sa_stdreactor_saslah,sa_sup,sa_utils,smokealarm]},
+              {mod,{smokealarm,[]}},
+              {registered,[sa_sup,sa_detectors_sup]},
+              {applications,[kernel,stdlib]}]}.

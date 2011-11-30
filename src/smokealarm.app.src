@@ -1,0 +1,12 @@
+%%% SmokeAlarm .app file for DEVELOPMENT with "high-level" tracing.
+
+{application, smokealarm,
+ [{description, "SmokeAlarm"},
+  {vsn, "0.0.1"},
+  {mod, {smokealarm, [[{child_otp_start_opts, []}],
+                      [{start_viewer, true},
+                       {start_tracer, {"smokealarm.dev.etrace", 1000}},
+                       {enable_trace_me, true},
+                       {enable_trace_calls, true}]]}},
+  {registered, [sa_sup, sa_detectors_sup]},
+  {applications, [kernel, stdlib]}]}.
